@@ -1,0 +1,62 @@
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   height="15"
+   width="23"
+   xml:space="preserve"
+   viewBox="0 0 23.000001 15"
+   y="0px"
+   x="0px"
+   id="Слой_3"
+   version="1.1"><defs
+   id="defs1510"><clipPath
+     id="s"><path
+       d="M 0,0 V 30 H 60 V 0 Z"
+       id="path5794" /></clipPath><clipPath
+     id="t"><path
+       d="m 30,15 h 30 v 15 z m 0,0 V 30 H 0 Z m 0,0 H 0 V 0 Z m 0,0 V 0 h 30 z"
+       id="path5797" /></clipPath></defs>
+<style
+   id="style1486"
+   type="text/css">
+	.st0{fill:#E5262A;}
+	.st1{fill:#F4E600;}
+</style>
+
+<g
+   transform="matrix(0.01916667,0,0,0.025,-1314.2493,16.825834)"
+   id="g4138"><path
+     id="path2895"
+     d="M -1339.9313,-673.03334 H -139.93126 V -73.033339 H -1339.9313 Z"
+     fill="#f2a800" /><path
+     id="path2897"
+     d="m -1339.9313,-673.03334 h 1200.00004 v 400 H -1339.9313 Z"
+     fill="#0033a0" /><path
+     id="path2899"
+     d="m -1339.9313,-673.03334 h 1200.00004 v 200 H -1339.9313 Z"
+     fill="#d90012" /></g><g
+   transform="matrix(0.01916667,0,0,0.025,11.967827,8.0104447)"
+   id="g6429"><g
+     id="g5810"
+     clip-path="url(#s)"
+     transform="matrix(20,0,0,20,-624.40824,-320.41779)"><path
+       id="path5800"
+       fill="#012169"
+       d="M 0,0 V 30 H 60 V 0 Z" /><path
+       id="path5802"
+       stroke-width="6"
+       stroke="#ffffff"
+       d="M 0,0 60,30 M 60,0 0,30" /><path
+       id="path5804"
+       stroke-width="4"
+       stroke="#c8102e"
+       clip-path="url(#t)"
+       d="M 0,0 60,30 M 60,0 0,30" /><path
+       id="path5806"
+       stroke-width="10"
+       stroke="#ffffff"
+       d="M 30,0 V 30 M 0,15 h 60" /><path
+       id="path5808"
+       stroke-width="6"
+       stroke="#c8102e"
+       d="M 30,0 V 30 M 0,15 h 60" /></g></g></svg>
