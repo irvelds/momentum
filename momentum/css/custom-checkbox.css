@@ -3,11 +3,11 @@
     flex-wrap: wrap;
     flex-direction: column;
     text-align: left;
-  }
+}
 
 
 .settings-panels-list-item {
-    display: block;
+    display: flex;
     position: relative;
     padding-left: 20px;
     margin-bottom: 6px;
@@ -32,16 +32,30 @@
     left: 0;
     height: 15px;
     width: 15px;
-    background-color: #eee;
+    background-color: #ffffff;
     border-radius: 2px;
+    border: 1px solid #a7a7a7;
 }
 
-.settings-panels-list-item:hover input~.checkmark {
-    background-color: #ccc;
+
+
+.settings-panels-list-item:hover input~.checkmark,
+.todo-items:hover input~.checkmark {
+    background-color: #eeeeee;
 }
 
-.settings-panels-list-item input:checked~.checkmark {
+.settings-panels-list-item:hover input:checked~.checkmark,
+.todo-items:hover input:checked~.checkmark {
+    background-color: #38a7ff;
+}
+
+.todo-items .checkmark {
+    top: 3px;
+}
+
+input:checked~.checkmark {
     background-color: #2196F3;
+    border:none;
 }
 
 .checkmark:after {
@@ -50,19 +64,18 @@
     display: none;
 }
 
-.settings-panels-list-item input:checked~.checkmark:after {
+input:checked~.checkmark:after {
     display: block;
 }
 
-.settings-panels-list-item .checkmark:after {
-    left: 5px;
-    top: 2px;
-    width: 5px;
-    height: 8px;
-    border: solid white;
-    border-width: 0 1px 1px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-
+.checkmark:after {
+        left: 5px;
+        top: 2px;
+        width: 3px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
 }

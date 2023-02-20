@@ -1,13 +1,13 @@
 import { showTime, showDate } from './date.js';
 import { showGreeting, showUserName, translateUserNamePlaceholder} from './greeting.js';
-import { showSlider, getSourceImg } from './slider.js';
+import { showSlider, getSourceImg, translateError, tagError} from './slider.js';
 import { showQuotes, reloadQuotes } from './quotes.js';
 import { getWeather, translateWeather } from './weather.js';
 import { state, showSettingsPanel,  setPanelItemsContent, saveSettingsStorage, getSettingsStorage, translateSettings} from './settings.js'
 
 
 import  { }  from './audio.js';
-
+import  { }  from './todo.js';
 // import './../css/style.css';
 // import './../css/owfont-regular.css';
 
@@ -25,6 +25,9 @@ function setLangSource() {
             translateWeather(state.language);
             translateSettings(state.language);
             setPanelItemsContent(state.language);
+            if ( tagError.textContent !== ''){
+            translateError(state.language);
+            }
         });
         if (e.value === localStorage.getItem('language')) {
             e.checked = true;
@@ -69,7 +72,6 @@ translateUserNamePlaceholder(state.language);
 
 /*Слайдер*/
 showSlider();
-
 /*Цитаты*/
 
 showQuotes(state.language)

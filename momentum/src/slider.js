@@ -19,7 +19,7 @@ let sourceImg;
 
 const tagImg = document.querySelector('.tag-img');
 const tagContainer = document.querySelector('.tag-container');
-const tagError = document.querySelector('.tag-error');
+export const tagError = document.querySelector('.tag-error');
 
 
 
@@ -153,7 +153,9 @@ function setTagsImg() {
     }
 
     else {
-        tagError.textContent = 'The tag must contain only latin letters and no more than 15 characters';
+       // tagError.textContent = 'The tag must contain only latin letters and no more than 15 characters';
+  
+        translateError(state.language)
     }
 
     }));
@@ -174,6 +176,7 @@ function getTagsImg() {
             let newTag = document.createElement('span');
             newTag.innerHTML = `${e}<button class="close-tag">x</button>`
             tagContainer.appendChild(newTag);
+       
            })   
            hideContainer(state.tagsApiContainer);
     }
@@ -190,11 +193,11 @@ function delTagsImg() {
             btn.target.parentNode.remove();
             const element = (btn.target.closest('span').textContent).slice(0, -1);
             const filterArray =  localStorage.getItem('tagsApi').split(',').filter(e =>{
-                return e !== element
+                return e !== element;
             })
             localStorage.setItem('tagsApi', filterArray);
-            folderImgApi = filterArray.join(',')
-
+            folderImgApi = filterArray.join(',');
+            btn.stopPropagation();
         })
     })
    
@@ -203,6 +206,9 @@ function delTagsImg() {
 window.addEventListener('load', delTagsImg);
 
 
+export function translateError(lang) {
+        lang === 'ru' ? tagError.textContent = 'Тег должен содержать только латинские буквы и не более 15 символов' : tagError.textContent = 'The tag must contain only latin letters and no more than 15 characters';
+}
 
 
 
@@ -215,32 +221,3 @@ window.addEventListener('load', delTagsImg);
 
 
 
-
-
-
-
-
-
-// document.addEventListener('DOMContentLoaded', getWeather);
-// weatherCity.addEventListener('keypress', setCity);
-// weatherCity.addEventListener('blur', setCity);
-
-
-
-
-  
-//   function validateTagInput(event) {
-//     if ((event.which === 13) && (tagInput.value !== '')) {
-//       if (onlyAlphabets()) {
-//         notValidTagInput.textContent = '';
-//         tagInput.classList.remove('error');
-//         createTag();
-//         tagInput.value = '';
-//       }
-//       else {
-//         tagInput.value = '';
-//         tagInput.classList.add('error');
-//         notValidTagInput.textContent = 'Please enter only latin letters';
-//       }
-//     }
-//   }

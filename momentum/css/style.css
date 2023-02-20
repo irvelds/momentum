@@ -18,7 +18,7 @@ body {
   color: #fff;
   text-align: center;
   /* background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);  */
-  background: url("") center/cover, rgba(0, 0, 0, 0.5); 
+  background: url("") center/cover, rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
 }
@@ -27,6 +27,24 @@ body {
   /* background-image: url(https://raw.githubusercontent.com/irvelds/stage1-tasks/assets/images/morning/20.jpg); */
   background-size: cover;
 }
+
+
+.overlay {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay.active {
+  opacity: transparent;
+}
+
 
 a {
   color: #ffffff;
@@ -57,7 +75,7 @@ a {
 
 .player-panel {
   opacity: 0.8;
-  padding: 20px;
+  padding: 5px 0;
   border-radius: 4px;
 }
 
@@ -125,7 +143,8 @@ a {
 .player-icon,
 .slider-icon,
 .change-quote,
-.settings-icon {
+.settings-icon,
+.todo-icon {
   width: 32px;
   height: 32px;
   background-size: 32px 32px;
@@ -185,7 +204,7 @@ a {
   width: 200px;
   height: 5px;
   opacity: 0.8;
-   -webkit-appearance: none; 
+  -webkit-appearance: none;
   transition: opacity 0.4s ease-in-out;
   border-radius: 4px;
   margin-top: 18px;
@@ -196,7 +215,7 @@ a {
   width: 100px;
   height: 5px;
   opacity: 0.8;
-   -webkit-appearance: none; 
+  -webkit-appearance: none;
   transition: opacity 0.4s ease-in-out;
   border-radius: 4px;
 }
@@ -218,9 +237,10 @@ a {
 
 .player-range::-webkit-slider-thumb,
 .volume-range::-webkit-slider-thumb
+
 /* .player__range::-moz-range-thumb,
 .player__range::-ms-thumb */
- {
+  {
   width: 10px;
   height: 10px;
   background: #c1ff06;
@@ -238,8 +258,9 @@ a {
 .play-track-name {
   text-align: left;
 }
+
 .play-track-duration {
-  color:  #c1ff06;
+  color: #c1ff06;
 }
 
 .player-range:hover+.player-tooltip {
@@ -287,12 +308,13 @@ a {
   width: 30px;
 }
 
-.volume-button svg{
+.volume-button svg {
   opacity: 0.8;
-  fill:#fff;
+  fill: #fff;
   height: 24px;
   width: 24px;
 }
+
 .volume-button svg use.hidden {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -477,6 +499,10 @@ a {
   color: transparent;
 }
 
+div:focus{
+  border: none;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -497,6 +523,12 @@ a {
 
 .footer-links span {
   flex-basis: 115px;
+}
+
+.footer-links .right-block {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
 }
 
 
@@ -524,13 +556,6 @@ a {
 .author {
   min-height: 40px;
 }
-
-
-
-
-
-
-
 
 
 /*Настройки*/
@@ -601,7 +626,7 @@ a {
 }
 
 
-.arrow::after {
+.settings-wrapper .arrow::after {
   position: absolute;
   display: block;
   bottom: 37px;
@@ -748,3 +773,192 @@ a {
     padding: 5px;
   }
 }
+
+
+
+
+/*Todo*/
+.widget-wrapper {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.todo-widget-container.active .widget-wrapper {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+  visibility: visible;
+}
+
+.todo {
+  margin-top: auto;
+}
+
+.todo-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  right: -10px;
+  bottom: 14px;
+  padding: 20px;
+  width: 320px;
+  min-height: 160px;
+  height: fit-content;
+  max-height: 400px;
+  color: rgb(34, 34, 34);
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  opacity: 0.97;
+  overflow-y: auto;
+  transition: all 0.5s ease-in-out 0s;
+
+}
+
+.todo-btn {
+  left: 20px;
+  background-image: url("../assets/svg/todo.svg");
+  margin-right: 40px;
+}
+
+.pike {
+  position: relative;
+}
+
+.pike::after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  bottom: 7px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  overflow: visible;
+  content: '';
+  border-top: 7px solid rgba(255, 255, 255, 0.95);
+  left: 10px;
+}
+
+
+
+.todo-list {}
+
+.todo-heading {
+  margin-bottom: 20px;
+}
+
+.todo-items {
+  display: flex;
+  position: relative;
+  overflow-wrap: anywhere;
+  align-items: start;
+  text-align-last: left;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.todo-items input:checked~label .todo-val-input {
+  text-decoration: line-through;
+}
+
+.todo-val-input {
+  border: none;
+  background: none;
+  margin-left: 20px;
+  font-size: 16px;
+  width: 185px;
+  text-align: left;
+  opacity: 0.8;
+  word-break: break-all;
+}
+
+.todo-val-input:focus {
+  outline: 2px solid lightblue;
+  border-radius: 2px;
+}
+
+
+.todo-label {
+  margin: -1px 5px 5px 3px;
+  flex-grow: 1;
+  line-height: 25px;
+}
+
+.todo-add-new-btn {
+  padding: 27px;
+  padding: 7px 24px;
+  background: #1078f4;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: .875rem;
+  font-weight: 500;
+  text-shadow: none;
+}
+
+.todo-empty-text {
+  padding: 0;
+  opacity: .7;
+  margin-bottom: 10px;
+}
+
+.todo-input {
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  border: 0;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.25);
+  background-color: transparent;
+  outline-color: rgba(34, 34, 34, 0.25);
+  width: 100%;
+}
+
+.todo-footer {
+  margin-bottom: 15px;
+}
+
+.todo-check {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+  top: 4px;
+}
+
+.todo-del {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-image: url(../assets/svg/delete.svg);
+}
+
+
+.todo-edit {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+  background-image: url(../assets/svg/edit.svg);
+}
+
+.todo-del:hover {
+  filter: invert(0.4) sepia(1) saturate(20) hue-rotate(180deg) brightness(1);
+}
+
+.todo-edit:hover {
+  filter: invert(0.4) sepia(1) saturate(20) hue-rotate(180deg) brightness(1);
+}
+
+
+
+.todo-button {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin: 0 5px;
+  border: 0;
+  outline: 0;
+  opacity: .8;
+  cursor: pointer;
+  transition: .3s;
+}
+

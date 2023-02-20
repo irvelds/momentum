@@ -1,6 +1,7 @@
 const settingsBtn = document.querySelector('.settings-btn');
 const settingsContainer = document.querySelector('.settings-wrapper');
 const settingsPanelItems = document.querySelectorAll('.settings-panels-list input');
+const settingsWidget = document.querySelectorAll('.settings-widget');
 
 
 export function showSettingsPanel() {
@@ -14,6 +15,13 @@ export function showSettingsPanel() {
         }
     })
 }
+
+/*Закрываем настройки не только по кнопке*/
+document.body.addEventListener('click', (e) => {
+    if (!e.target.closest('.settings-wrapper')) {
+        settingsContainer.classList.remove('active');
+    }
+})
 
 export function getTimesOfDay() {
     const hours = new Date().getHours();
@@ -31,72 +39,35 @@ export let state = {
     tags: getFolder[timeOfDay],
     tagsApiContainer: localStorage.getItem('tagsApiContainer') ? localStorage.getItem('tagsApiContainer') : 'none',
     tagsApi: localStorage.getItem('tagsApi') ? localStorage.getItem('tagsApi') : getFolder[timeOfDay],
-    // panels: [
-    //     { widget: 'weather', shown: true, translateEn: 'Weather', translateRu: 'Погода'},
-    //     { widget: 'time', shown: true, translateEn: 'Time', translateRu: 'Время'},
-    //     { widget: 'date', shown: true, translateEn: 'Date', translateRu: 'Дата' },
-    //     { widget: 'greeting', shown: true, translateEn: 'Greeting', translateRu: 'Приветствие'},
-    //     { widget: 'quote', shown: true, translateEn: 'Quote' , translateRu: 'Цитаты'},
-    //     { widget: 'player', shown: true, translateEn: 'Player', translateRu: 'Плеер' },
-    // ],
-    // panels: JSON.parse(localStorage.getItem('panels')) ? JSON.parse(localStorage.getItem('panels')) : [
-    //     { widget: 'weather', shown: true, translateEn: 'weather', translateRu: 'погода' },
-    //     { widget: 'time', shown: true, translateEn: 'time', translateRu: 'время' },
-    //     { widget: 'date', shown: true, translateEn: 'date', translateRu: 'дата' },
-    //     { widget: 'greeting', shown: true, translateEn: 'greeting', translateRu: 'приветствие' },
-    //     { widget: 'quote', shown: true, translateEn: 'quote', translateRu: 'цитаты' },
-    //     { widget: 'player', shown: true, translateEn: 'player', translateRu: 'плеер' },
-    // ],
-
     panels: JSON.parse(localStorage.getItem('panels')) ? JSON.parse(localStorage.getItem('panels')) : [
-        { widget: 'weather', shown: true, en: 'Weather', ru: 'Погода' },
         { widget: 'time', shown: true, en: 'Time', ru: 'Время' },
         { widget: 'date', shown: true, en: 'Date', ru: 'Дата' },
         { widget: 'greeting', shown: true, en: 'Greeting', ru: 'Приветствие' },
         { widget: 'quote', shown: true, en: 'Quote', ru: 'Цитаты' },
+        { widget: 'weather', shown: true, en: 'Weather', ru: 'Погода' },
         { widget: 'player', shown: true, en: 'Player', ru: 'Плеер' },
+        { widget: 'todo', shown: true, en: 'Todo', ru: 'Список дел' }
     ]
 
 };
 
 
-//присваиваем checkboxaм значение из stage но не мутируем объект
-// settingsPanelItems.forEach(e => {
-//     const array = JSON.parse(JSON.stringify(state.panels));
-//     const obj = array.find(el => el.widget == e.value);
-//     state.panels.find(el => el.widget == e.value);
-//     e.checked = obj.shown;
-// })
-
-
-
-// export function setPanelItemsContent(lang) {
-//     settingsPanelItems.forEach(e => {
-//         const el = state.panels.find(el => el.widget === e.value);
-//         var element = e.closest('label');
-//         console.log(element.firstElementChild.innerHTML)
-//         lang === 'en' ? element.firstElementChild.innerHTML = el.translateEn : element.firstElementChild.innerHTML = el.translateRu;
-
-//     })
-// }
-
-// console.log(state)
-
-
-
 //присваиваем checkboxaм значение из stage
 settingsPanelItems.forEach(e => {
     const element = state.panels.find(el => el.widget === e.value);
-    e.checked = element.shown;
+    if(element.shown){
+        e.checked = element.shown;
+    }
+    
 })
 
-export function setPanelItemsContent(lang){
-settingsPanelItems.forEach(e => {
-    const el = state.panels.find(el => el.widget === e.value);
-    var element = e.closest('label');
-    lang === 'en' ? element.firstElementChild.innerHTML = el.en : element.firstElementChild.innerHTML = el.ru;
+export function setPanelItemsContent(lang) {
+    settingsPanelItems.forEach(e => {
+        const el = state.panels.find(el => el.widget === e.value);
+        var element = e.closest('label');
+        lang === 'en' ? element.firstElementChild.innerHTML = el.en : element.firstElementChild.innerHTML = el.ru;
 
-})
+    })
 }
 
 
@@ -199,6 +170,7 @@ export function translateSettings(lang) {
     lang === 'ru' ? document.querySelector('.settings-language h4').innerHTML = 'Язык' : document.querySelector('.settings-language h4').innerHTML = 'Language';
     lang === 'ru' ? document.querySelector('.settings-img h4').innerHTML = 'Фотографии' : document.querySelector('.settings-img h4').innerHTML = 'Photos';
     lang === 'ru' ? document.querySelector('.settings-panels h4').innerHTML = 'Основные' : document.querySelector('.settings-panels h4').innerHTML = 'General';
-    lang === 'ru' ? document.querySelector('.tag-error').innerHTML = 'Тег должен содержать только латинские буквы и не более 15 символов' : document.querySelector('.tag-error').innerHTML = 'The tag must contain only latin letters and no more than 15 characters';
 }
+
+
 
