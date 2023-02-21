@@ -270,7 +270,7 @@ a {
 .player-tooltip {
   /* display: none; */
   position: absolute;
-  top: 55px;
+  top: 40px;
   display: none;
   margin-left: -20px;
   font-size: 11px;
@@ -521,7 +521,7 @@ div:focus{
   width: 100%;
 }
 
-.footer-links span {
+.footer-links .footer-item {
   flex-basis: 115px;
 }
 
@@ -842,8 +842,12 @@ div:focus{
 
 .todo-list {}
 
-.todo-heading {
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
   margin-bottom: 20px;
+  
 }
 
 .todo-items {
@@ -948,8 +952,6 @@ div:focus{
   filter: invert(0.4) sepia(1) saturate(20) hue-rotate(180deg) brightness(1);
 }
 
-
-
 .todo-button {
   background-position: center center;
   background-repeat: no-repeat;
@@ -960,5 +962,13 @@ div:focus{
   opacity: .8;
   cursor: pointer;
   transition: .3s;
+}
+
+.todo-form {
+  position: absolute;
+  right: 0;
+  color: gray;
+  font-size: 15px;
+  margin-top: -6px;
 }
 

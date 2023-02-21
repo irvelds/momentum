@@ -11,8 +11,8 @@ export async function getQuotes() {
     let data = await res.json();
     random = Math.floor(Math.random() * data[0].length);
     length = data[0].length;
-    console.log(length)
-    console.log(data)
+    // console.log(length)
+    // console.log(data)
     return data
 }
 export const result = getQuotes().then(data => {

@@ -108,13 +108,13 @@ function playByItem(itemIndex) {
 
 
 function playPrev() {
-    console.log(playNum)
+    // console.log(playNum)
     playNum > 0 ? playNum-- : playNum = playList.length - 1;
     playAudio();
 }
 
 function playNext() {
-    console.log(playNum)
+    // console.log(playNum)
     playNum < playList.length - 1 ? playNum++ : playNum = 0;
     playAudio();
 }

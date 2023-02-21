@@ -82,7 +82,7 @@ async function getFlickrImage() {
     const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${id}&tags=${folderImgApi}&extras=url_l&format=json&nojsoncallback=1`;
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     const index = Math.round(Math.random() * (data.photos.photo).length);
     urlImg = data.photos.photo[index].url_l;
     showSlider();
@@ -140,7 +140,7 @@ function setTagsImg() {
         let tegArr = [];
         tegArr.push((e.target.value).trim());
         folderImgApi = ([folderImgApi, ...tegArr]).join(',');
-        console.log(folderImgApi);
+        // console.log(folderImgApi);
         localStorage.setItem('tagsApi', folderImgApi);
 
         /*Перенести в функцию*/
