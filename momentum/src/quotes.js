@@ -11,8 +11,6 @@ export async function getQuotes() {
     let data = await res.json();
     random = Math.floor(Math.random() * data[0].length);
     length = data[0].length;
-    // console.log(length)
-    // console.log(data)
     return data
 }
 export const result = getQuotes().then(data => {
@@ -29,7 +27,9 @@ function setQuotes(lang, data) {
         quote = data[0][random].textEn;
         author = data[0][random].authorEn;
     }
+    quoteContainer.classList.add('active');
     quoteContainer.innerHTML = `"${quote}"`;
+    authorContainer.classList.add('active');
     authorContainer.innerHTML = author;
 }
 
@@ -47,21 +47,12 @@ export function reloadQuotes(lang) {
         random = 0;
     }
     result.then(data => {
-        setQuotes(lang, data);
+        quoteContainer.classList.remove('active');
+        authorContainer.classList.remove('active');
+        setTimeout(()=>{
+            setQuotes(lang, data);
+        }, 500)
+   
     })
 }
 
-
-
-
-
-
-// function getQuotes() {
-//     const quotes = 'data.json';
-//     fetch(quotes)
-//       .then(res => res.json())
-//       .then(data => {
-//         console.log(data);
-//       });
-//   }
-//   getQuotes();

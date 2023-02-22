@@ -161,13 +161,17 @@ a {
 
 .player-icon:hover,
 .slider-icon:hover,
-.change-quote:hover {
+.settings-icon:hover,
+.change-quote:hover,
+.todo-icon:hover {
   opacity: 1;
 }
 
 .player-icon:active,
 .slider-icon:active,
-.change-quote:active {
+.settings-icon:active,
+.change-quote:active,
+.todo-icon:active {
   border: 0;
   outline: 0;
   transform: scale(1.1);
@@ -306,10 +310,14 @@ a {
   border: none;
   height: 25px;
   width: 30px;
+  opacity: 0.8;
+}
+
+.volume-button:hover{
+  opacity: 1;
 }
 
 .volume-button svg {
-  opacity: 0.8;
   fill: #fff;
   height: 24px;
   width: 24px;
@@ -532,6 +540,9 @@ div:focus{
 }
 
 
+.name {
+  opacity: 0.8;
+}
 
 .change-quote {
   margin-bottom: 30px;
@@ -551,10 +562,18 @@ div:focus{
 .quote {
   min-height: 40px;
   font-size: 20px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.quote.active,
+.author.active {
+  opacity: 1;
 }
 
 .author {
   min-height: 40px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 
@@ -676,6 +695,7 @@ div:focus{
   padding: 0 5px 0 5px;
   font-size: 16px;
   color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 .close-tag:hover {
@@ -753,26 +773,6 @@ div:focus{
 }
 
 
-@media (max-width: 768px) {
-  .time {
-    min-height: 80px;
-    font-size: 72px;
-  }
-
-  .greeting-panel {
-    min-height: 40px;
-    font-size: 32px;
-  }
-
-  .greeting {
-    padding: 5px;
-  }
-
-  .name {
-    font-size: 32px;
-    padding: 5px;
-  }
-}
 
 
 
@@ -839,8 +839,6 @@ div:focus{
 }
 
 
-
-.todo-list {}
 
 .todo-header {
   display: flex;
@@ -971,4 +969,7 @@ div:focus{
   font-size: 15px;
   margin-top: -6px;
 }
+
+
+
 

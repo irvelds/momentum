@@ -1,0 +1,156 @@
+
+@media (max-width: 768px) {
+    .main {
+
+        height: 35vh;
+    }
+
+    .header {
+        height: 35vh;
+    }
+
+    .weather-panel {
+
+        margin-left: 20px;
+
+    }
+    .volume-controls {
+        margin-top: 7px;
+    }
+    .time {
+      min-height: 80px;
+      font-size: 72px;
+    }
+  
+    .greeting-panel {
+      min-height: 40px;
+      font-size: 32px;
+    }
+  
+    .greeting {
+      padding: 5px;
+    }
+  
+    .name {
+      font-size: 32px;
+      padding: 5px;
+      color: rgb(193 255 6);
+    }
+
+    
+    .player-range {
+        width: 150px;
+        margin-top: 0;
+    }
+    
+    .volume-range {
+        width: 80px;
+    }
+
+  }
+  
+
+    @media(max-width:576px) {
+        body {
+            min-width: 320px;
+        }
+
+        .play-list-container {
+            max-height: 150px;
+            overflow: auto;
+            /* width: fit-content; */
+            max-width: 280px;
+        }
+
+        .time {
+            font-size: 62px;
+        }
+
+        .date {
+            font-size: 18px;
+        }
+
+        .greeting-panel {
+            font-size: 18px;
+        }
+
+        .name {
+            font-size: 18px;
+            color: rgb(193 255 6);
+        }
+
+        .slider-icon {
+            margin-top: 0;
+        }
+
+        .todo-widget {
+            right: -50px;
+            width: 300px;
+        }
+
+        .settings-widget {
+            padding: 10px;
+            width: 300px;
+        }
+
+        .footer-links .footer-item {
+            flex-basis: auto;
+        }
+
+        .player-icon,
+        .slider-icon,
+        .change-quote,
+        .settings-icon,
+        .todo-icon {
+            width: 24px;
+            height: 24px;
+            background-size: 24px 24px;
+        }
+
+        .play {
+            width: 28px;
+            height: 28px;
+            background-size: 28px 28px;
+        }
+
+        .footer {
+            padding: 10px;
+        }
+
+        .player {
+            flex-wrap: wrap;
+            margin-bottom: 0px;
+        }
+
+        .player-range {
+            width: 120px;
+            margin-top: 0;
+        }
+
+        .header {
+            padding: 10px;
+        }
+
+        .volume-range {
+            width: 50px;
+        }
+
+        .volume-controls {
+            margin-left: -5px;
+        }
+
+        .play-button-container {
+
+            margin-top: 0px;
+        }
+
+        .city {
+            width: 100px;
+        }
+
+        .weather-panel {
+            font-size: 14px;
+        }
+
+
+    }

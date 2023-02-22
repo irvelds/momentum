@@ -11,7 +11,7 @@ const weatherError = document.querySelector('.weather-error')
 
 let humidity = '';
 let wind = '';
-let ms = ''; 
+let ms = '';
 
 
 
@@ -46,33 +46,29 @@ export async function getWeather(lng) {
 
 function showError(data, lng) {
     if (data.message === 'city not found' || data.message === 'Nothing to geocode') {
-        lng === 'ru' ? weatherError.textContent = 'Город не найден.': weatherError.textContent = 'City is not found. Please check spelling'  
+        lng === 'ru' ? weatherError.textContent = 'Город не найден.' : weatherError.textContent = 'City is not found. Please check spelling'
     }
     else {
         weatherError.textContent = '';
     }
-  }
-
-
-
-
+}
 
 
 function setCity(e) {
-    getWeather(state.language);
-    weatherCity.blur();
     setLocalStorageCity();
-    // if (e.code === 'Enter' || e.type === 'blur') {
-    //     getWeather(lng);
-    //     weatherCity.blur();
-    //     setLocalStorageCity();
-    // }
+    getWeather(state.language);
 }
-weatherCity.addEventListener('change', setCity);
 
-// document.addEventListener('DOMContentLoaded', getWeather);
-// weatherCity.addEventListener('keypress', setCity);
-// weatherCity.addEventListener('blur', setCity);
+weatherCity.addEventListener('change', setCity);
+weatherCity.addEventListener('keypress', (event) => {
+    if ((event.which === 13)) {
+        weatherCity.blur();
+    }
+});
+
+window.addEventListener('beforeunload', ()=>{
+    weatherCity.blur();
+})
 
 
 
@@ -106,5 +102,5 @@ export function translateWeather(lng) {
     lng === 'ru' ? wind = 'Cкорость ветра' : wind = 'Wind speed';
     lng === 'ru' ? ms = 'м/с' : ms = 'm/s';
     lng === 'ru' ? weatherCity.placeholder = '[Введите город]' : weatherCity.placeholder = '[Enter the city]';
-    
+
 }

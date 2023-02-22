@@ -178,10 +178,11 @@ function createTodoList(todos) {
 // const list2 = document.querySelectorAll('#list2 .selectopt');
 
 const form = document.querySelector('form');
-
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+})
 form.elements["todo-item"].value = selectTodoItem1;
 form.addEventListener('change', (e) => {
-
     selectTodoItem1 = e.target.value;
     if (e.target.value === 'all') {
         localStorage.setItem('selectTodoItem1', 'all');

@@ -1,23 +1,577 @@
 [
     [
         {
-            "textRu": "Пишите код так, как будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете",
-            "authorRu": "Стив Макконнелл",
-            "textEn": "Write code like the maintainer would be a violent psychopath who knows where you live",
-            "authorEn": "Steve McConnell"
+        "textRu": "Пишите код так, как будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете",
+        "authorRu": "Стив Макконнелл",
+        "textEn": "Write code like the maintainer would be a violent psychopath who knows where you live",
+        "authorEn": "Steve McConnell"
         },
         {
-            "textRu": "Сложность программы растет до тех пор, пока не превысит способности программиста",
-            "authorRu": "Артур Блох. Законы Мэрфи",
-            "textEn": "The complexity of the program grows until it exceeds the ability of the programmer",
-            "authorEn": "Arthur Bloch. Murphy's laws"
+        "textRu": "Сложность программы растет до тех пор, пока не превысит способности программиста",
+        "authorRu": "Артур Блох. Законы Мэрфи",
+        "textEn": "The complexity of the program grows until it exceeds the ability of the programmer",
+        "authorEn": "Arthur Bloch. Murphy's laws"
         },
         {
-            "textRu": "Ходить по воде и разрабатывать программы, следуя ТЗ, очень просто… если они заморожены",
-            "authorRu": "И. Берард",
-            "textEn": "It's very easy to walk on water and develop programs following the ToR... if they are frozen",
-            "authorEn": "I. Berard"
+        "textRu": "Ходить по воде и разрабатывать программы, следуя ТЗ, очень просто… если они заморожены",
+        "authorRu": "И. Берард",
+        "textEn": "It's very easy to walk on water and develop programs following the ToR... if they are frozen",
+        "authorEn": "I. Berard"
+        },
+        {
+        "textRu": "Мы в жизни любим только раз, а после ищем лишь похожих",
+        "authorRu": "С. Есенин",
+        "textEn": "We love only once in life, and then we look only for similar people",
+        "authorEn": "S. Yesenin"
+        },
+        {
+        "textRu": "У самого злого человека расцветает лицо, когда ему говорят, что его любят. Стало быть, в этом счастье",
+        "authorRu": " Л.Н. Толстой",
+        "textEn": "The most evil person’s face blooms when he is told that he is loved. Therefore, this is happiness",
+        "authorEn": "L.N.Tolstoy"
+        },
+        {
+        "textRu": "А я не убью тебя, потому что с тобой безумно весело",
+        "authorRu": "Джокер. Комиксы DC",
+        "textEn": "And I won’t kill you because you’re just too much fun",
+        "authorEn": "The Joker. DC Comics"
+        },
+        {
+        "textRu": "Если не знаешь, чего хочешь, умрешь в куче того, чего не хотел",
+        "authorRu": "Чак Паланик. Бойцовский клуб",
+        "textEn": "If you don't know what you want, you’ll end up with a lot you don't",
+        "authorEn": "Chuck Palahniuk. Fight Club"
+        },
+        {
+        "textRu": "Семья — это вовсе не список, кто кого родил",
+        "authorRu": "Бобби Сингер. Сверхъестественное",
+        "textEn": "A family is not a list of who gives birth to whom",
+        "authorEn": "Bobby Singer. Supernatural"
+        },
+        {
+        "textRu": "Знать путь и пройти его — не одно и тоже",
+        "authorRu": "Морфеус. Матрица",
+        "textEn": "There's a difference between knowing the path and walking the path",
+        "authorEn": "Morpheus. The Matrix"
+        },
+        {
+        "textRu": "Та, кто делает пожар, не зажигая спичек",
+        "authorRu": "Скриптонит",
+        "textEn": "The one who makes a fire without lighting matches",
+        "authorEn": "Scriptonite"
+        },
+        {
+        "textRu": "На перемены в твоём настроении у меня аллергия",
+        "authorRu": "Белла Свон. Сумерки",
+        "textEn": "Your mood swings are kind of giving me whiplash",
+        "authorEn": "Bella Swan. Twilight"
+        },
+        {
+        "textRu": "В конце концов, именно такой человек и нужен. Который сам приходит, когда необходим. Которого никогда не нужно просить",
+        "authorRu": "Клиника",
+        "textEn": "And at the end of the day, that's who you want. The guy who shows up when you need him, without having to ask",
+        "authorEn": "Scrubs"
+        },
+        {
+        "textRu": "Каждый живет, как хочет, и расплачивается за это сам",
+        "authorRu": "Оскар Уайльд",
+        "textEn": "Each man lives his own life, and pais his own price for living it",
+        "authorEn": "Oscar Wilde"
+        },
+        {
+        "textRu": "Сильные люди не любят свидетелей своей слабости",
+        "authorRu": "Маргарет Митчелл",
+        "textEn": "Strong people do not like witnesses of their weakness",
+        "authorEn": "Margaret Mitchell"
+        },
+        {
+        "textRu": "Жизнь — это не ожидание, что гроза закончится... это учиться танцевать под дождем",
+        "authorRu": "Вивиан Грин",
+        "textEn": "Life's not about waiting for the storm to pass... it's about learning to dance in the rain",
+        "authorEn": "Vivian Green"
+        },
+        {
+        "textRu": "У людей теперь нет времени друг для друга",
+        "authorRu": "Рей Бредбери",
+        "textEn": "People don't have time for each other anymore",
+        "authorEn": "Ray Bradbury"
+        },
+        {
+        "textRu": "Лучшие сны происходят, когда вы бодрствуете",
+        "authorRu": "Черри Гилдерблум",
+        "textEn": "The best dreams happen when you are awake",
+        "authorEn": "Cherie Gilderbloom"
+        },
+        {
+        "textRu": "Нельзя быть слишком хорошо одетым или слишком хорошо образованным",
+        "authorRu": "Оскар Уайльд",
+        "textEn": "You can never be overdressed or overeducated",
+        "authorEn": "Oscar Wilde"
+        },
+        {
+        "textRu": "Упади семь раз, поднимись восемь",
+        "authorRu": "Японская пословица",
+        "textEn": "Fall seven times and stand up eight",
+        "authorEn": "Japanese Proverb"
+        },
+        {
+        "textRu": "Успех — дитя смелости",
+        "authorRu": "Бенджамин Дизраэли",
+        "textEn": "Success is the child of audacity",
+        "authorEn": "Benjamin Disraeli"
+        },
+        {
+        "textRu": "Мы не помним дни, мы помним моменты",
+        "authorRu": "Чезаре Павезе",
+        "textEn": "We do not remember days, we remember moments",
+        "authorEn": "Cesare Pavese"
+        },
+        {
+        "textRu": "Всегда прощайте своих врагов — ничто не раздражает их сильнее",
+        "authorRu": "Оскар Уайльд",
+        "textEn": "Always forgive your enemies. Nothing annoys them more",
+        "authorEn": "Oscar Wilde"
+        },
+        {
+        "textRu": "Больше не гоняясь за бабочками, мы с Камилой посадили наш сад, чтобы они могли прилетать к нам",
+        "authorRu": "Мэттью Макконахи",
+        "textEn": "No longer chasing butterflies, Camila and I planted our garden so they could come to us",
+        "authorEn": "Matthew Mcconaughey"
+        },
+        {
+        "textRu": "Сделайте первый шаг в вере. Вам не нужно видеть всю лестницу, просто сделайте первый шаг",
+        "authorRu": "Мартин Лютер Кинг",
+        "textEn": "Take the first step in faith. You do not it have to see the whole staircase, just take the first step",
+        "authorEn": "Martin Luther King Jr"
+        },
+        {
+        "textRu": "Знание — сила",
+        "authorRu": "Фрэнсис Бэкон",
+        "textEn": "Knowledge is power",
+        "authorEn": "Sir Francis Bacon"
+        },
+        {
+        "textRu": "Коли свои дрова сам, и ты согреешься дважды",
+        "authorRu": "Генри Форд",
+        "textEn": "Chop your own wood and it will warm you twice",
+        "authorEn": "Henry Ford"
+        },
+        {
+        "textRu": "Успех — это один процент вдохновения и девяносто девять процентов пота",
+        "authorRu": "Томас Эдисон",
+        "textEn": "Success is one percent inspiration, ninety-nine percent perspiration",
+        "authorEn": "Thomas Edison"
+        },
+        {
+        "textRu": "Если у вас нет контроля над своим ртом, вы не сможете контролировать свое будущее",
+        "authorRu": "Германия Кент",
+        "textEn": "If you do not have control over your mouth, you will not have control over your future",
+        "authorEn": "Germany Kent"
+        },
+        {
+        "textRu": "Я не боюсь штормов, потому что я учусь управлять своим кораблем",
+        "authorRu": "Луиза Олкотт",
+        "textEn": "I am not afraid of storms, for I am learning how to sail my ship",
+        "authorEn": "Little Women, Louisa M. Alcot"
+        },
+        {
+        "textRu": "Хорошие друзья, хорошие книги и спящая совесть – вот идеальная жизнь",
+        "authorRu": "Марк Твен",
+        "textEn": "Good friends, great books and a sleeping conscience — that is the ideal life",
+        "authorEn": "Mark Twain"
+        },
+        {
+        "textRu": "Жизнь — как вождение велосипеда. Чтобы сохранить равновесие, ты должен двигаться",
+        "authorRu": "Альберт Эйнштейн",
+        "textEn": "Life is like riding a bicycle. To keep your balance, you must keep moving",
+        "authorEn": "Albert Einstein"
+        },
+        {
+        "textRu": "— Это больно — умирать? — Быстрее, чем засыпать",
+        "authorRu": " Гарри Поттер. Джоан Роулинг",
+        "textEn": "— Does it hurt? Dying? — Quicker than falling asleep",
+        "authorEn": " Harry Potter by J.K. Rowling"
+        },
+        {
+        "textRu": "Боль тем и полезна, что заставляет двигаться дальше",
+        "authorRu": "Земфира",
+        "textEn": "Pain is useful because it makes you move on",
+        "authorEn": "Zemfira"
+        },
+        {
+        "textRu": "Истина — как плесень, и зарождается в спорах",
+        "authorRu": "Оксимирон",
+        "textEn": "Truth is like mold — it originates in disputes",
+        "auhorEn": "OxxxyMiron"
+        },
+        {
+        "textRu": "Образование — восхитительная вещь, но следует помнить хотя бы время от времени, что ничему тому, что действительно следует знать, обучить нельзя",
+        "authorRu": "Оскар Уайльд",
+        "textEn": "Education is an admirable thing, but it is well to remember from time to time that nothing that is worth knowing can be taught",
+        "authorEn": "Oscar Wilde"
+        },
+        {
+        "textRu": "Проблемы, вызванные одержанной победой, приятней проблем, вызванных поражением, но они не менее трудные",
+        "authorRu": "Уинстон Черчилль",
+        "textEn": "The problems of victory are more agreeable than those of defeat, but they are no less difficult",
+        "authorEn": "Winston Churchill"
+        },
+        {
+        "textRu": "Я часто думаю, что ночь более живая и более насыщенная, чем день",
+        "authorRu": "Ван Гог",
+        "textEn": "I often think that the night is more alive and more richly colored than the day",
+        "authorEn": "Van Gogh"
+        },
+        {
+        "textRu": "Девушка должна иметь два образа: классический и роскошный",
+        "authorRu": "Коко Шанель",
+        "textEn": "A girl should be two things: classy and fabulous",
+        "authorEn": "Coco Chanel"
+        },
+        {
+        "textRu": "Ваше время ограничено, поэтому не тратьте его проживая чужую жизнь",
+        "authorRu": "Стив Джобс",
+        "textEn": "Your time is limited, so don’t waste it living someone else’s life",
+        "authorEn": "Steve Jobs"
+        },
+        {
+        "textRu": "Оптимизм — совершенно законный ответ на неудачу",
+        "authorRu": "Стивен Кинг",
+        "textEn": "Optimism is a perfectly legitimate response to failure",
+        "authorEn": "Stephen King"
+        },
+        {
+        "textRu": "Цель без плана всего лишь желание",
+        "authorRu": "Антуан де Сент-Экзюпери",
+        "textEn": "A goal without a plan is just a wish",
+        "authorEn": "Antoine de Saint-Exupery"
+        },
+        {
+        "textRu": "Хорошие моменты сегодняшнего дня — это грустные мысли завтрашнего",
+        "authorRu": "Боб Марли",
+        "textEn": "The good times of today are the sad thoughts of tomorrow",
+        "authorEn": "Bob Marley"
+        },
+        {
+        "textRu": "— Куда, мисс? —К звездам!",
+        "authorRu": "Титаник",
+        "textEn": "— Where to, Miss? —To the stars!",
+        "authorEn": "Titanic"
+        },
+        {
+        "textRu": "Когда у тебя ничего нет, нечего и терять",
+        "authorRu": "Джек Доусон. Титаник",
+        "textEn": "When you got nothing, you got nothing to lose",
+        "authorEn": "Jack Dawson. Titanic"
+        },
+        {
+        "textRu": "Музыка — это универсальный язык человечества",
+        "authorRu": "Генри Уодсворт Лонгфелло",
+        "textEn": "Music is the universal language of mankind",
+        "authorEn": "Henry Wadsworth Longfellow"
+        },
+        {
+        "textRu": "Люби всех, доверяй избранным и никому не делай зла",
+        "authorRu": "Уильям Шекспир",
+        "textEn": "Love all, trust a few, do wrong to none",
+        "authorEn": "William Shakespeare"
+        },
+        {
+        "textRu": "У настоящих историй любви нет финалов",
+        "authorRu": "Ричард Бах",
+        "textEn": "True love stories never have endings",
+        "authorEn": "Richard Bach"
+        },
+        {
+        "textRu": "Любовь это дружба, переложенная на музыку",
+        "authorRu": "Джозеф Кэмпбелл",
+        "textEn": "Love is a friendship set to music",
+        "authorEn": "Joseph Campbell"
+        },
+        {
+        "textRu": "Правосудие есть истина в действии",
+        "authorRu": "Бенджамин Дизраэли",
+        "textEn": "Justice is truth in action",
+        "authorEn": "Benjamin Disraeli"
+        },
+        {
+        "textRu": "Не делай другому того, чего себе не пожелаешь",
+        "authorRu": "Конфуций",
+        "textEn": "What you do not want done to yourself, do not do to others",
+        "authorEn": "Confucius"
+        },
+        {
+        "textRu": "В центре трудности лежит возможность",
+        "authorRu": "Альберт Эйнштейн",
+        "textEn": "In the middle of difficulty lies opportunity",
+        "authorEn": "Albert Einstein"
+        },
+        {
+        "textRu": "Великие часто сталкивались с жестоким противостоянием посредственных умов",
+        "authorRu": "Альберт Эйнштейн",
+        "textEn":
+        "Great spirits have always encountered violent opposition from mediocre minds",
+        "authorEn": "Albert Einstein"
+        },
+        {
+        "textRu": "Только о двух вещах мы будем жалеть на смертном одре: что мало любили и мало путешествовали",
+        "authorRu": "Марк Твен",
+        "textEn":
+        "Only two things we'll regret on deathbed – that we are a little loved and little traveled",
+        "authorEn": "Mark Twain"
+        },
+        {
+        "textRu": "Нужно принять сторону врага, если хотите увидеть вещи так же, как он",
+        "authorRu": "Игра престолов",
+        "textEn":
+        "You need to take your enemy's side if you're going to see things the way they do",
+        "authorEn": "Game of thrones"
+        },
+        {
+        "textRu": "— Элементарно, мой дорогой Ватсон!",
+        "authorRu": "Шерлок Холмс",
+        "textEn": "— Elementary, my dear Watson!",
+        "authorEn": "Sherlock Holmes"
+        },
+        {
+        "textRu": "Мы покупаем вещи, которые нам не нужны, чтобы впечатлить людей, которых мы не любим",
+        "authorRu": "Бойцовский клуб",
+        "textEn": "We buy things we don't need, to impress people we don't like",
+        "authorEn": "Fight Club"
+        },
+        {
+        "textRu": "Жизнь — это череда выборов",
+        "authorRu": "Нострадамус",
+        "textEn": "Life is a series of choices",
+        "authorEn": "Nostradamus"
+        },
+        {
+        "textRu": "Успех — дитя смелости",
+        "authorRu": "Бенджамин Дизраэли",
+        "textEn": "Success is the child of audacity",
+        "authorEn": "Benjamin Disraeli"
+        },
+        {
+        "textRu": "Вы промахнётесь 100 раз из 100 бросков, которые так и не сделаете",
+        "authorRu": "Уэйн Гретцки",
+        "textEn": "You miss 100% of the shots you don’t take",
+        "authorEn": "Wayne Gretzky"
+        },
+        {
+        "textRu": "Выживает не самый сильный и не самый умный, а тот, кто лучше всех приспосабливается к изменениям",
+        "authorRu": "Чарльз Дарвин",
+        "textEn": "It is not the strongest of the species that survives, nor the most intelligent, but the one most responsive to change",
+        "authorEn": "Charles Darwin"
+        },
+        {
+        "textRu": "К достойной цели нет коротких путей",
+        "authorRu": "Хелен Келлер",
+        "textEn": "There are no shortcuts to any place worth going",
+        "authorEn": "Helen Keller"
+        },
+        {
+        "textRu": "Успех — не ключ к счастью. Это счастье — ключ к успеху",
+        "authorRu": "Герман Кейн",
+        "textEn": "Success is not the key to happiness. Happiness is the key to success",
+        "authorEn": "Herman Cain"
+        },
+        {
+        "textRu": "Ум — это всё. Что вы думаете, тем вы становитесь",
+        "authorRu": "Будда",
+        "textEn": "The mind is everything. What you think you become",
+        "authorEn": "Buddha"
+        },
+        {
+        "textRu": "Когда я делаю добро, я чувствую себя хорошо. Когда я поступаю плохо, я чувствую себя плохо. Вот моя религия",
+        "authorRu": "Авраам Линкольн",
+        "textEn": "When I do good, I feel good. When I do bad, I feel bad. That’s my religion",
+        "authorEn": "Abraham Lincoln"
+        },
+        {
+        "textRu": "Я не продукт моих обстоятельств. Я продукт моих решений",
+        "authorRu": "Стивен Кови",
+        "textEn": "I am not a product of my circumstances. I am a product of my decisions",
+        "authorEn": "Stephen Covey"
+        },
+        {
+        "textRu": "Помните: никто не может заставить вас почувствовать себя униженным без вашего согласия",
+        "authorRu": "Элеонора Рузвельт",
+        "textEn": "Remember no one can make you feel inferior without your consent",
+        "authorEn": "Eleanor Roosevelt"
+        },
+        {
+        "textRu": "Имеет значение не количество прожитых лет, а качество вашей жизни в эти годы",
+        "authorRu": "Авраам Линкольн",
+        "textEn": "It’s not the years in your life that count. It’s the life in your years",
+        "authorEn": "Abraham Lincoln"
+        },
+        {
+        "textRu": "Есть люди, у которых есть деньги, и есть богатые люди",
+        "authorRu": "Коко Шанель",
+        "textEn": "There are people who have money and people who are rich",
+        "authorEn": "Coco Chanel"
+        },
+        {
+        "textRu": "Мы живём один раз, но если правильно распорядиться жизнью, то и одного раза достаточно",
+        "authorRu": "Мэй Уэст",
+        "textEn": "You only live once, but if you do it right, once is enough",
+        "authorEn": "Mae West"
+        },
+        {
+        "textRu": "Нет ничего невозможного. В самом этом слове заключена возможность!",
+        "authorRu": "Одри Хепбёрн",
+        "textEn": "Nothing is impossible, the word itself says, I’m possible!",
+        "authorEn": "Audrey Hepburn"
+        },
+        {
+        "textRu": "Не плачь, потому что это закончилось, улыбнись, потому что это было",
+        "authorRu": "Доктор Сьюз",
+        "textEn": "Don’t cry because it’s over, smile because it happened",
+        "authorEn": "Dr. Seuss"
+        },
+        {
+        "textRu": "Любовь — это непреодолимое желание быть непреодолимо желанным",
+        "authorRu": "Роберт Фрост",
+        "textEn": "Love is an irresistible desire to be irresistibly desired",
+        "authorEn": "Robert Frost"
+        },
+        {
+        "textRu": "Это была любовь с первого взгляда, с последнего взгляда, с извечного взгляда",
+        "authorRu": "Владимир Набоков. Лолита",
+        "textEn": "It was love at first sight, at last sight, at ever and ever sight",
+        "authorEn": "Vladimir Nabokov, Lolita"
+        },
+        {
+        "textRu": "Вы понимаете, что влюблены, когда не можете заснуть, потому что реальность наконец-то прекраснее ваших снов",
+        "authorRu": "Доктор Сьюз",
+        "textEn": "You know you’re in love when you can’t fall asleep because reality is finally better than your dreams",
+        "authorEn": "Dr. Seuss"
+        },
+        {
+        "textRu": "Истинная любовь встречается редко, и только она придаёт жизни подлинный смысл",
+        "authorRu": "Николас Спаркс. Послание в бутылке",
+        "textEn": "True love is rare, and it’s the only thing that gives life real meaning",
+        "authorEn": "Nicholas Sparks, Message in a Bottle"
+        },
+        {
+        "textRu": "Границы моего языка — это границы моего мира",
+        "authorRu": "Людвиг Витгенштейн",
+        "textEn": "The limits of my language are the limits of my world",
+        "authorEn": "Ludwig Wittgenstein"
+        },
+        {
+        "textRu": "Знание — это сокровище, которое всюду следует за тем, кто им обладает",
+        "authorRu": "Китайская пословица",
+        "textEn": "Learning is a treasure that will follow its owner everywhere",
+        "authorEn": "Chinese Proverb"
+        },
+        {
+        "textRu": "Вы никогда не поймёте один язык, пока не будете понимать хотя бы два",
+        "authorRu": "Джеффри Вилланс",
+        "textEn": "You can never understand one language until you understand at least two",
+        "authorEn": "Geoffrey Willans"
+        },
+        {
+        "textRu": "Владеть вторым языком означает обладать второй душой",
+        "authorRu": "Карл Великий",
+        "textEn": "To have another language is to possess a second soul",
+        "authorEn": "Charlemagne"
+        },
+        {
+        "textRu": "Язык — это кровь души, в которую текут мысли и из которой они произрастают",
+        "authorRu": "Оливер Уэнделл Холмс",
+        "textEn": "Language is the blood of the soul into which thoughts run and out of which they grow",
+        "authorEn": "Oliver Wendell Holmes"
+        },
+        {
+        "textRu": "Познание — это дар. Даже когда боль — твой учитель",
+        "authorRu": "Майя Уотсон",
+        "textEn": "Learning is a gift. Even when pain is your teacher",
+        "authorEn": "Maya Watson"
+        },
+        {
+        "textRu": "Никогда не смейтесь над человеком, который говорит на ломаном английском. Это значит, что он знает и другой язык",
+        "authorRu": "Х. Джексон Браун — младший",
+        "textEn": "Never make fun of someone who speaks broken English. It means they know another language",
+        "authorEn": "H. Jackson Brown, Jr."
+        },
+        {
+        "textRu": "Живи так, будто умрёшь завтра. Учись так, будто будешь жить вечно",
+        "authorRu": "Махатма Ганди",
+        "textEn": "Live as if you were to die tomorrow. Learn as if you were to live forever",
+        "authorEn": "Mahatma Gandhi"
+        },
+        {
+        "textRu": "Не бойтесь совершенства; вам его никогда не достичь",
+        "authorRu": "Сальвадор Дали",
+        "textEn": "Have no fear of perfection; you’ll never reach it",
+        "authorEn": "Salvador Dali"
+        },
+        {
+        "textRu": "Две вещи бесконечны — Вселенная и человеческая глупость, но насчёт Вселенной я не уверен",
+        "authorRu": "Альберт Эйнштейн",
+        "textEn": "Only two things are infinite — the universe and human stupidity, and I’m not sure about the former",
+        "authorEn": "Albert Einstein"
+        },
+        {
+        "textRu": "Имейте в жизни только невежество и самоуверенность, и успех не заставит себя ждать",
+        "authorRu": "Марк Твен",
+        "textEn": "All you need in this life is ignorance and confidence, and then success is sure",
+        "authorEn": "Mark Twain"
+        },
+        {
+        "textRu": "Если книга о провале не продаётся, можно ли считать это успехом?",
+        "authorRu": "Джерри Сайнфелд",
+        "textEn": "If a book about failures doesn’t sell, is it a success?",
+        "authorEn": "Jerry Seinfeld"
+        },
+        {
+        "textRu": "Жизнь приятна. Смерть безмятежна. Вся проблема в переходе от одного к другому",
+        "authorRu": "Айзек Азимов",
+        "textEn": "Life is pleasant. Death is peaceful. It’s the transition that’s troublesome",
+        "authorEn": "Isaac Asimov"
+        },
+        {
+        "texRu": "Примите себя таким, какой вы есть. Только если вы не серийный убийца",
+        "authorRu": "Эллен Дедженерес. Серьезно… я шучу",
+        "textEn": "Accept who you are. Unless you’re a serial killer",
+        "authorEn": "Ellen DeGeneres, Seriously… I’m Kidding"
+        },
+        {
+        "textRu": "Пессимист — это человек, который считает всех настолько же невыносимыми, как он сам, и ненавидит их за это",
+        "authorRu": "Джордж Бернард Шоу",
+        "textEn": "A pessimist is a man who thinks everybody is as nasty as himself, and hates them for it",
+        "authorEn": "George Bernard Shaw"
+        },
+        {
+        "textRu": "Хотите узнать цену деньгам? Попробуйте взять взаймы",
+        "authorRu": "Бенджамин Франклин",
+        "textEn": "If you would like to know the value of money, try to borrow some",
+        "authorEn": "Benjamin Franklin"
+        },
+        {
+        "textRu": "Жизнь была бы трагичной, если бы не была такой забавной",
+        "authorRu": "Стивен Хокинг",
+        "textEn": "Life would be tragic if it weren’t funny",
+        "authorEn": "Stephen Hawking"
+        },
+        {
+        "textRu": "Все животные равны, но некоторые животные более равны, чем другие",
+        "authorRu": "Джордж Оруэлл",
+        "textEn": "All animals are equal, but some animals are more equal than others",
+        "authorEn": "George Orwell"
+        },
+        {
+        "textRu": "Четыре ноги хорошо, две ноги плохо",
+        "authorRu": "Джордж Оруэлл",
+        "textEn": "Four legs good, two legs bad",
+        "authorEn": "George Orwell"
+        },
+        {
+        "textRu": "Астрономия заставляет душу смотреть вверх и ведет нас из этого мира в другой",
+        "authorRu": "Платон",
+        "textEn": "Astronomy compels the soul to look upwards and leads us from this world to another",
+        "authorEn": "Plato"
         }
-
-    ]
+        ]    
 ]
