@@ -85,6 +85,7 @@ a {
 
 .play-list-container {
   text-align: left;
+  max-width: fit-content;
 }
 
 .play-item {
