@@ -1,11 +1,12 @@
 import { state } from './settings.js';
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
+const weatherInfo = document.querySelector('.weather-info');
 const weatherDescription = document.querySelector('.weather-description');
 const weatherCity = document.querySelector('.city');
 const weatherHumidity = document.querySelector('.humidity');
 const weatherWind = document.querySelector('.wind');
-const weatherError = document.querySelector('.weather-error')
+const weatherError = document.querySelector('.weather-error');
 
 
 
@@ -21,19 +22,19 @@ export async function getWeather(lng) {
     const res = await fetch(url);
     const data = await res.json();
     // console.log(data);
-    if (data.cod === 200) {
+    if (data.cod === 200) {     
+        weatherInfo.classList.add('active');
         weatherIcon.className = 'weather-icon owf';
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
         temperature.textContent = `${data.main.temp}°C`;
         weatherDescription.textContent = data.weather[0].description;
         weatherHumidity.textContent = `${humidity}: ${data.main.humidity} %`;
         weatherWind.textContent = `${wind}: ${data.wind.speed.toFixed(0)} ${ms}`;
-        // weatherError.textContent = '';
         showError(data, lng)
     }
     else {
+        weatherInfo.classList.remove('active');
         showError(data, lng)
-        // weatherError.textContent = `Error! ${data.message}`;
         weatherIcon.className = 'weather-icon none owf';
         temperature.textContent = '';
         weatherDescription.textContent = '';
@@ -46,9 +47,11 @@ export async function getWeather(lng) {
 
 function showError(data, lng) {
     if (data.message === 'city not found' || data.message === 'Nothing to geocode') {
+        weatherError.classList.add('active');
         lng === 'ru' ? weatherError.textContent = 'Город не найден.' : weatherError.textContent = 'City is not found. Please check spelling'
     }
     else {
+        weatherError.classList.remove('active');
         weatherError.textContent = '';
     }
 }

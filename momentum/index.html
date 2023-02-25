@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/owfont-regular.css">
   <link rel="stylesheet" href="css/custom-checkbox.css">
   <link rel="stylesheet" href="css/custom-select-box.css">
+  <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <!-- <link rel="stylesheet" href="css/test.css" /> -->
@@ -16,6 +17,12 @@
 
 <body>
   <div class="overflow"></div>
+  <div class="modal-panel"> 
+    <div class="modal">
+        <p class="modal-message"></p>
+        <button class="modal-close">Ок</button>
+    </div>
+  </div>
   <header class="header">
     <div class="player-panel">
       <div class="player">
@@ -75,14 +82,16 @@
     <div class="weather-panel">
       <input type="text" class="city" value="Минск" placeholder="[Enter city]">
       <!-- <div class="city" contenteditable="true" placeholder="[Enter city]">Минск</div> -->
-      <i class="weather-icon owf"></i>
       <div class="weather-error"></div>
-      <div class="description-container">
-        <span class="temperature"></span>
-        <span class="weather-description"></span>
+      <div class="weather-info">
+        <i class="weather-icon owf"></i>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
       </div>
-      <div class="wind"></div>
-      <div class="humidity"></div>
     </div>
   </header>
   <main class="main">

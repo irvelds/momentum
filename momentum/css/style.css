@@ -313,7 +313,7 @@ a {
   opacity: 0.8;
 }
 
-.volume-button:hover{
+.volume-button:hover {
   opacity: 1;
 }
 
@@ -374,13 +374,10 @@ a {
 }
 
 
-
-
-
 .weather-panel {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: flex-start;
   row-gap: 5px;
   width: 180px;
@@ -388,9 +385,23 @@ a {
   text-align: left;
 }
 
-.weather-error {
+.weather-info {
+  opacity: 0;
   margin-top: -10px;
+  transition: all 0.5s ease-in-out;
 }
+
+.weather-error {
+  margin-top: 15px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.weather-error.active,
+.weather-info.active {
+  opacity: 1;
+}
+
 
 .description-container {
   display: flex;
@@ -507,7 +518,7 @@ a {
   color: transparent;
 }
 
-div:focus{
+div:focus {
   border: none;
 }
 
@@ -565,6 +576,7 @@ div:focus{
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
+
 .quote.active,
 .author.active {
   opacity: 1;
@@ -845,7 +857,7 @@ div:focus{
   justify-content: space-between;
   position: relative;
   margin-bottom: 20px;
-  
+
 }
 
 .todo-items {
@@ -897,6 +909,13 @@ div:focus{
   font-weight: 500;
   text-shadow: none;
 }
+
+.todo-add-new-btn:hover {
+  background: #0d66d3;
+}
+
+
+
 
 .todo-empty-text {
   padding: 0;
@@ -969,7 +988,3 @@ div:focus{
   font-size: 15px;
   margin-top: -6px;
 }
-
-
-
-

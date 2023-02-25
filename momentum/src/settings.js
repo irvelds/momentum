@@ -18,10 +18,11 @@ export function showSettingsPanel() {
 
 /*Закрываем настройки не только по кнопке*/
 document.body.addEventListener('click', (e) => {
-    if (!e.target.closest('.settings-wrapper')) {
+    if (!(e.target.closest('.settings-wrapper') || e.target.closest('.modal-panel') || e.target.closest('.modal-message') || e.target.closest('.modal') || e.target.closest('.modal-close'))) {
         settingsContainer.classList.remove('active');
     }
 })
+
 
 export function getTimesOfDay() {
     const hours = new Date().getHours();
