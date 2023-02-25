@@ -28,6 +28,10 @@ body {
   background-size: cover;
 }
 
+.preload * {
+  transition: none !important;
+  display: none;
+}
 
 .overlay {
   position: absolute !important;

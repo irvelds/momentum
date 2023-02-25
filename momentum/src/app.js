@@ -12,7 +12,6 @@ import { } from './todo.js';
 // import './../css/owfont-regular.css';
 
 
-
 function setLangSource() {
     document.querySelectorAll('[name="radio-lng"]').forEach(e => {
         e.addEventListener('change', (chk) => {
@@ -122,6 +121,7 @@ window.addEventListener('beforeunload', saveSettingsStorage);
 window.addEventListener('load', getSettingsStorage);
 setPanelItemsContent(state.language);
 
-
-
+window.addEventListener('load', function() {
+    this.document.body.classList.remove('preload');
+})
 

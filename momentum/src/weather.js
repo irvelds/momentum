@@ -95,11 +95,6 @@ export function translateWeather(lng) {
     if (weatherCity.value === 'Минск' || weatherCity.value === 'Minsk') {
         lng === 'ru' ? weatherCity.value = 'Минск' : weatherCity.value = 'Minsk';
     }
-
-    // if (!localStorage.getItem('city')) {
-    //     lng === 'ru' ? weatherCity.value = 'Минск' : weatherCity.value = 'Minsk';
-    // }
-
     getWeather(state.language)
     lng === 'ru' ? humidity = 'Относительная влажность' : humidity = 'Humidity';
     lng === 'ru' ? wind = 'Cкорость ветра' : wind = 'Wind speed';
