@@ -26,9 +26,9 @@ export async function getWeather(lng) {
         weatherInfo.classList.add('active');
         weatherIcon.className = 'weather-icon owf';
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-        temperature.textContent = `${data.main.temp}°C`;
+        temperature.textContent = `${Math.round(data.main.temp)}°C`;
         weatherDescription.textContent = data.weather[0].description;
-        weatherHumidity.textContent = `${humidity}: ${data.main.humidity} %`;
+        weatherHumidity.textContent = `${humidity}: ${Math.round(data.main.humidity)} %`;
         weatherWind.textContent = `${wind}: ${data.wind.speed.toFixed(0)} ${ms}`;
         showError(data, lng)
     }
