@@ -1,4 +1,4 @@
-
+@import url("color.css");
 @media (max-width: 768px) {
     .main {
 
@@ -34,7 +34,7 @@
     .name {
       font-size: 32px;
       padding: 5px;
-      color: rgb(193 255 6);
+      color: var(--audio-color)
     }
 
     
@@ -76,7 +76,7 @@
 
         .name {
             font-size: 18px;
-            color: rgb(193 255 6);
+            color: var(--audio-color)
         }
 
         .slider-icon {
@@ -150,6 +150,11 @@
 
         .weather-panel {
             font-size: 14px;
+        }
+
+        .custom-radio-label span {
+            padding: 0;
+            padding-right: 5px;
         }
 
 

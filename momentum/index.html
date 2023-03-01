@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/owfont-regular.css">
   <link rel="stylesheet" href="css/custom-checkbox.css">
   <link rel="stylesheet" href="css/custom-select-box.css">
+  <link rel="stylesheet" href="css/custom-radio.css">
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -157,19 +158,22 @@
               </div>
               <div class="settings-img">
                 <h4>Photos</h4>
+
                 <fieldset class="settings-options">
-                  <label for="github-img">
+                  <div class="container-custom-radio">
+                  <label for="github-img" class="custom-radio-label">
                     <input id="github-img" value="github" type="radio" checked name="widget-img">
                     <span>GitHub</span>
                   </label>
-                  <label for="unsplash-img">
+                  <label for="unsplash-img" class="custom-radio-label">
                     <input id="unsplash-img" value="unsplash" type="radio" name="widget-img">
                     <span>Unsplash</span>
                   </label>
-                  <label for="flickr-img">
+                  <label for="flickr-img" class="custom-radio-label">
                     <input id="flickr-img" value="flickr" type="radio" name="widget-img">
                     <span>Flickr</span>
                   </label>
+                 </div>
                   <div>
                     <input class="tag-img" type="text" placeholder="Tag here">
                     <span class="tag-error"></span>

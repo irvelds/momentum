@@ -12,8 +12,8 @@ let playNum = 0;
 
 const audio = new Audio();
 
-
-
+//const baseColor = '#9795ff';
+const baseColor = '#E1EA35';
 
 
 
@@ -153,7 +153,7 @@ function updateTime() {
 function updateProgress() {
     playerRange.value = Math.floor(audio.currentTime);
     let background = Math.floor((audio.currentTime / audio.duration) * 100);
-    playerRange.style.background = `linear-gradient(to right, #c1ff06, 0%,  #c1ff06, ${background}%, #ffffff ${background}%)`;
+    playerRange.style.background = `linear-gradient(to right, ${baseColor}, 0%,  ${baseColor}, ${background}%, #ffffff ${background}%)`;
 }
 
 
@@ -206,7 +206,7 @@ const volumeMute = document.querySelector('use[href="#volume-mute"]');
 const volumeLow = document.querySelector('use[href="#volume-low"]');
 const volumeHigh = document.querySelector('use[href="#volume-high"]');
 const volumeRange = document.querySelector('.volume-range');
-volumeRange.style.background = `linear-gradient(to right, #c1ff06, 0%,  #c1ff06, ${volumeRange.value * 100}%, #ffffff ${volumeRange.value * 100}%)`;
+volumeRange.style.background = `linear-gradient(to right, ${baseColor}, 0%,  ${baseColor}, ${volumeRange.value * 100}%, #ffffff ${volumeRange.value * 100}%)`;
 
 //Обновления громкости при перетаскивании ползунка
 function updateVolume() {
@@ -214,7 +214,7 @@ function updateVolume() {
         audio.muted = false;
     }
     audio.volume = volumeRange.value;
-    volumeRange.style.background = `linear-gradient(to right, #c1ff06, 0%,  #c1ff06, ${volumeRange.value * 100}%, #ffffff ${volumeRange.value * 100}%)`;
+    volumeRange.style.background = `linear-gradient(to right, ${baseColor}, 0%,  ${baseColor}, ${volumeRange.value * 100}%, #ffffff ${volumeRange.value * 100}%)`;
 }
 
 volumeRange.addEventListener('input', updateVolume);
@@ -228,10 +228,10 @@ function toggleMute() {
     if (audio.muted) {
         volumeRange.setAttribute('data-volume', volumeRange.value);
         volumeRange.value = 0;
-        volumeRange.style.background = `linear-gradient(to right, #c1ff06, 0%,  #c1ff06, 0%, #ffffff 0%)`;
+        volumeRange.style.background = `linear-gradient(to right, ${baseColor}, 0%,  ${baseColor}, 0%, #ffffff 0%)`;
     } else {
         volumeRange.value = volumeRange.dataset.volume;
-        volumeRange.style.background = `linear-gradient(to right, #c1ff06, 0%,  #c1ff06, ${volumeRange.value * 100}%, #ffffff ${volumeRange.value * 100}%)`;
+        volumeRange.style.background = `linear-gradient(to right, ${baseColor}, 0%,  ${baseColor}, ${volumeRange.value * 100}%, #ffffff ${volumeRange.value * 100}%)`;
 
     }
 }

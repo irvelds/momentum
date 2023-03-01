@@ -1,3 +1,4 @@
+@import url("color.css");
 /* Select-box */
 .select 
 {
@@ -32,7 +33,7 @@
 .count {
     flex-basis: auto;
     margin-left: 5px;
-    color: #2196F3;
+    color: var(--base);
 }
 
 .select-option:hover {

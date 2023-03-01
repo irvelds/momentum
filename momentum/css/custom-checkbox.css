@@ -1,3 +1,4 @@
+@import url("color.css");
 .settings-panels-list {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +47,7 @@
 
 .settings-panels-list-item:hover input:checked~.checkmark,
 .todo-items:hover input:checked~.checkmark {
-    background-color: #38a7ff;
+    background-color: var(--base-light);
 }
 
 .todo-items .checkmark {
@@ -54,7 +55,7 @@
 }
 
 input:checked~.checkmark {
-    background-color: #2196F3;
+    background-color: var(--base);;
     border:none;
 }
 
@@ -73,7 +74,7 @@ input:checked~.checkmark:after {
         top: 2px;
         width: 3px;
         height: 8px;
-        border: solid white;
+        border: solid var(--base-dark);
         border-width: 0 2px 2px 0;
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
